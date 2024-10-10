@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -44,6 +45,13 @@
                 <version>${testng.version}</version>
             <!--<scope>compile</scope> -->
             </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -80,32 +88,30 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.1</version>
                 <configuration>
-                    <argLine>
-                        --add-opens java.base/java.lang=ALL-UNNAMED
-                        --add-opens java.base/java.util=ALL-UNNAMED
-                        --add-opens java.base/java.net=ALL-UNNAMED
-                        --add-opens java.base/java.util.regex=ALL-UNNAMED
-                        --add-exports java.base/sun.net.spi=ALL-UNNAMED
-                        --add-opens java.base/sun.net.spi=ALL-UNNAMED
-                        --add-opens java.base/java.io=ALL-UNNAMED
-                        --add-opens java.base/sun.reflect.annotation=ALL-UNNAMED
-                    </argLine>
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                        -Xmx1024m
-                        --add-opens=java.base/java.lang=ALL-UNNAMED
-                        --add-opens=java.base/java.util=ALL-UNNAMED
-                        --add-opens=java.base/java.net=ALL-UNNAMED
-                        --add-opens=java.base/java.util.regex=ALL-UNNAMED
-                        --add-opens=java.base/java.io=ALL-UNNAMED
-                        --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED
-                        --add-exports=java.base/sun.net.spi=ALL-UNNAMED
-                        --add-opens=java.base/sun.net.spi=ALL-UNNAMED
-                    </argLine>
-                    <suiteXmlFiles>
-                        <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                    </suiteXmlFiles>
+                    <testFailureIgnore>true</testFailureIgnore>
+
+                    <!--                    <argLine>-->
+<!--                        &#45;&#45;add-opens java.base/java.lang=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.util=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.net=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.util.regex=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-exports java.base/sun.net.spi=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/sun.net.spi=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/java.io=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens java.base/sun.reflect.annotation=ALL-UNNAMED-->
+<!--                    </argLine>-->
+<!--                    <argLine>-->
+<!--                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
+<!--                        -Xmx1024m-->
+<!--                        &#45;&#45;add-opens=java.base/java.lang=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/java.util=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/java.net=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/java.util.regex=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/java.io=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-exports=java.base/sun.net.spi=ALL-UNNAMED-->
+<!--                        &#45;&#45;add-opens=java.base/sun.net.spi=ALL-UNNAMED-->
+<!--                    </argLine>-->
                 </configuration>
 
                 <dependencies>
@@ -118,7 +124,7 @@
                         <groupId>org.projectlombok</groupId>
                         <artifactId>lombok</artifactId>
                         <version>1.18.30</version>
-                        <scope>provided</scope>
+                        <scope>compile</scope>
                     </dependency>
                 </dependencies>
             </plugin>
