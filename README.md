@@ -6,4 +6,9 @@ Tools Used-
   3. Maven Build Tool
 
 1. Clone the repository
+    https://github.com/akshat2812/FancodeAssignment.git
+2.Run the project in the IDE with Maven to resolve dependencies
+
+Project Setup:
+1. 
      
