@@ -10,5 +10,10 @@ Tools Used-
 2.Run the project in the IDE with Maven to resolve dependencies
 
 Project Setup:
-1. 
+1. src/main/java contains all the helper files and reusable methods.
+     a. api contains the baseuri and helper functions to call the api and perform necessary task onto it.
+     b. constants has the given required range for user lat-long.
+     c. pojo has the required response pojo for the apis required to assess them.
+     d. utils has the rest client connections and the test report helper functions.
+
      
