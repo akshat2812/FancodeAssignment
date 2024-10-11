@@ -8,7 +8,7 @@ Tools Used-
 
 1. Clone the repository
    
-    ```https://github.com/akshat2812/FancodeAssignment.git```
+    git clone https://github.com/akshat2812/FancodeAssignment.git
    
 2.Run the project in the IDE with Maven to resolve dependencies
 
