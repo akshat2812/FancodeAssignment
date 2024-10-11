@@ -4,8 +4,7 @@ Tools Used-
   1. JDK
   2. IDE (IntelliJ)
   3. Maven Build Tool
-
-
+     
 1. Clone the repository
    
     git clone https://github.com/akshat2812/FancodeAssignment.git
