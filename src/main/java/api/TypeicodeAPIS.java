@@ -1,12 +1,9 @@
 package api;
 
-import com.epam.ta.reportportal.ws.annotations.In;
 import constants.Constants;
-import constants.StatusCodes;
 import io.restassured.response.Response;
 import pojo.ApiEndpoints;
 import pojo.UserDetails;
-import pojo.Users;
 import pojo.Todo;
 import utils.RestClient;
 import java.util.*;

@@ -1,7 +1,6 @@
 package assignment;
 
 import api.TypeicodeAPIS;
-import com.epam.ta.reportportal.ws.annotations.In;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
@@ -56,7 +55,9 @@ public class Fancode{
         Map<Integer,Double> userCompletionPercentage = typeicodeAPIS.taskCompletionPercentage(ids);
         userCompletionPercentage.forEach((userId,complPerc)->{
             test.info("Given user "+ userId +"has completed "+ complPerc+ "tasks");
-            Assert.assertTrue( complPerc > passingPercentValue,"User Id"+ userId+"has less than 50% tasks completed,with value:"+complPerc);
+            Assert.assertTrue( complPerc > passingPercentValue,String.format("User Id %s has less than 50%% tasks completed,with value: %s",userId,complPerc));
+
+
         });
     }
 
