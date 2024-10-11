@@ -16,4 +16,19 @@ Project Setup:
      c. pojo has the required response pojo for the apis required to assess them.
      d. utils has the rest client connections and the test report helper functions.
 
+2. test/java/assignment contains the test cases file that cover all the test cases and the required task.
+
+Dependencies:
+  Pom.xml contains all the dependencies and version control of the project.
+
+TestReport:
+  A comprehensive test report is generated that covers all the test cases execution and shows the results of them.
+  It is generated everytime the entire test cases are executed.
+  It is named : target/extent-reports/extent.html
+
+
+
+
+
+
      
