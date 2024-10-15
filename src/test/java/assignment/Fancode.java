@@ -54,7 +54,7 @@ public class Fancode{
         List<Integer> ids =typeicodeAPIS.getEligibleUsersIds();
         Map<Integer,Double> userCompletionPercentage = typeicodeAPIS.taskCompletionPercentage(ids);
         userCompletionPercentage.forEach((userId,complPerc)->{
-            test.info("Given user "+ userId +"has completed "+ complPerc+ "tasks");
+            test.info("Given user "+ userId +" has completed "+ complPerc+ "% tasks");
             Assert.assertTrue( complPerc > passingPercentValue,String.format("User Id %s has less than 50%% tasks completed,with value: %s",userId,complPerc));
 
 
