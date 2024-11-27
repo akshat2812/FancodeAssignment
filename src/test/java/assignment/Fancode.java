@@ -8,6 +8,7 @@ import java.util.Map;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pojo.Todo;
 import utils.TestReportUtils;
 
 public class Fancode{
@@ -66,7 +67,7 @@ public class Fancode{
         test = TestReportUtils.createTest("Checking Posts Api");
         Integer respCode = typeicodeAPIS.checkPostsApi();
 
-        test.info("Status Code received:" + respCode);
+        test.info(  "Status Code received:" + respCode);
         Assert.assertEquals(respCode,200,"Posts api connection is stable");
     }
 

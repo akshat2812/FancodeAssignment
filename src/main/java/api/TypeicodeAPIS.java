@@ -1,5 +1,5 @@
 package api;
-
+import java.sql.ResultSet;
 import constants.Constants;
 import io.restassured.response.Response;
 import pojo.ApiEndpoints;
@@ -31,7 +31,6 @@ public class TypeicodeAPIS {
     public List<Integer> getEligibleUsersIds() {
         Response resBody = RestClient.ResponseBody(ApiEndpoints.USERS.getUri());
         List<UserDetails> users = List.of(resBody.as(UserDetails[].class));
-
         List<UserDetails> filteredUsers = users.stream()
                 .filter(userDetails -> {
                     double lat = Double.parseDouble(userDetails.getAddress().getGeo().getLat());
